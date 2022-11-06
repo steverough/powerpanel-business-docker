@@ -2,8 +2,10 @@ version: "3"
 
 services:
   app:
-    image: ghcr.io/nathanvaughn/powerpanel-business:local-latest
-    # build: .
+    image: powerpanel-business:local-latest
+    build:
+      context: .
+      dockerfile: Dockerfile.local
     ports:
       # Ports: ???, http, https, ???, snmp, snmp
       # See https://dl4jz3rbrsfum.cloudfront.net/documents/CyberPower_UM_PowerPanel-Business-486.pdf
